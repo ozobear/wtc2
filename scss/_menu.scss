@@ -1,0 +1,66 @@
+
+main{
+    position: relative;
+}
+    
+    .menu{
+        position: fixed;
+        width: 20%;
+        background: #004b8a;
+        
+        left: 0%;
+        top:40%;
+        z-index: 10000;
+
+        nav{
+            li{
+                padding: 3px;
+                font-size: 13px;
+                position: relative;
+                line-height: 1.8;
+                overflow:hidden;
+                
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all .4s;
+
+                    &:hover{
+                        color: rgba(86, 159, 226, 0.753);
+                                                
+                    }
+                    
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transition: all .3s;
+                }
+
+                &:hover:before{
+                    width: 100%;
+                }
+
+                .activo{
+                    color: rgba(86, 159, 226, 0.953);
+                    font-weight: 600;
+                  
+                  }
+
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 1300px){
+        .menu{
+            width: 25%;}
+    }

@@ -1,0 +1,269 @@
+$color-1:#004b8a;
+$color-2:#4267af;
+$color-3:#569fd2;
+
+// Sobreescribiendo estilos de Bootstrap
+.bg-primary{
+    background-color: $color-1!important;
+}
+
+//Slides
+@mixin slides ($fondo){
+    background: $fondo;
+    background-size: cover;
+    background-position: center;
+}
+
+//Estructura general
+.bg-wtc {
+    background: url("../img/background-wtc.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    .contenedor-inicial {
+        min-height: 65vh;
+        background: $color-1;
+    }
+
+    .contenedor-logo {
+        max-height: 15vh;
+        display: flex;
+        align-items: flex-end;
+        img{
+            max-width:300px;
+        }
+    }
+}
+
+//Sección fixed
+.bg-wtc-fixed{
+    background: url("../img/background-movil-02.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.video-fixed {
+    height: 100vh;
+    background: url("../img/fondo-video.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.mision-vision {
+    height: 100vh;
+
+    .mision {
+        background: $color-2;
+        height: 50vh;
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .vision {
+        background: $color-3;
+        height: 50vh;
+
+        img {
+            width: 45%;
+        }
+
+        img.img-fade-vision{
+            opacity: 0.2;
+            width: 30%;
+            position: absolute;
+            margin-top: -10px;
+            right: 0;
+        }
+    }
+}
+
+.valores {
+    background: $color-1;
+    height: 100vh;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.historia {
+    background-color: $color-2;
+
+    @mixin line ($margen){
+        border-left: 2px solid #fff;
+        height: 50px;
+        width: 2px;
+        margin-left: $margen;
+    }
+
+    .vl1 {
+        @include line(30%)
+    }
+
+    .vl2 {
+        @include line(50%)
+    }
+}
+
+.esr{
+    background: $color-3;
+    img {
+        max-width: 60%;
+    }
+
+    img.img-fade-esr{
+        opacity: 0.2;
+        width: 20%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+}
+
+.slide-torre-Ccomercial{
+    height: 100vh;
+    .slide{
+        height: 100%;
+
+        .slide-torre1{
+            @include slides(url('../img/centro-comercial.jpg'));
+            height: 100vh;
+        }
+
+        .slide-torre2{
+            @include slides(url('../img/background-wtc.jpg'));
+            height: 100vh;
+        }
+    }
+}
+.torre-Ccomercial{
+    height: 100vh;
+    .torre{
+        height: 50vh;
+        background: $color-1;
+        img {
+            max-width: 60%;
+        }
+    }
+
+    .centro-comercial{
+        height: 50vh;
+        background: $color-2;
+    }
+}
+
+.slide-ciecPepsi{
+    height: 100vh;
+    .slide{
+        height: 100%;
+
+        .slide-ciec1{
+            @include slides(url('../img/pepsi-center.jpg'));
+            height: 100vh;
+        }
+
+        .slide-ciec2{
+            @include slides(url('../img/ciec.jpg'));
+            height: 100vh;
+        }
+    }
+}
+
+.ciec{
+    background: $color-3;
+    height: 100vh;
+}
+
+.img-estacionamiento{
+    height: 100vh;
+        @include slides(url('../img/estacionamiento.jpg'));
+}
+
+.estacionamiento{
+    background: $color-1;
+    height: 100vh;
+    img {
+        width: 70%;
+    }
+
+    .img-fade-estacionamiento{
+        opacity: 0.2;
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+}
+
+.img-contacto{
+    height: 100vh;
+        @include slides(url('../img/fondo-video.jpg'));
+}
+
+.contacto{
+    background: $color-2;
+    height: 100vh;
+    i{
+        font-size: 30px;
+    }
+}
+//Termina sección fixed
+
+/* Botones Index */
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	pointer-events: auto;
+	color: #004b8a;
+	border: 0;
+	border-radius: 1.85em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.885em;
+	padding: 1em 2em;
+	margin: 0 auto;
+	background:#fff;
+	transition: 0.3s, opacity 0.7s;
+
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:hover {
+	box-shadow: 10px 10px 24px #5C67AD;
+	color: #004b8a;
+}
+
+.btn--trigger {
+	width: 15em;
+	position: absolute;
+	bottom: 2em;
+	left: 50%;
+	margin: 0 0 0 -7.5em;
+}
+
+.btn--hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Links */
+
+a {
+	text-decoration: none;
+	color: #fff;
+	outline: none;
+}
+
+

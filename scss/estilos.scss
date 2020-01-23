@@ -1,0 +1,68 @@
+@import "intro";
+@import "estructura-general";
+@import "menu";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    h2 {
+        font-weight: 600;
+    }
+}
+
+.pages-generals{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color:#004B8A;
+    h1{
+        font-weight: 700;
+        font-size: 35px;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    h5{
+        font-weight: 600;
+        font-size: 20px;
+        color: #545661;
+    }
+
+    p{
+        color: #545661;
+        font-weight: 400;
+    }
+
+    a{
+        text-decoration: none;
+        color: #004B8A;
+    }
+
+    .hline{
+        border-bottom: 4px solid #004B8A;
+        width: 35px;
+    }
+}
+
+//Video Background
+.video-fixed {
+    height: 167.1vh;
+    margin: 0;
+    padding: 0;
+    background-position: 0;
+    background-size: cover; }
+  
+  .video-background {
+   width: 100%; }
